@@ -1,4 +1,4 @@
-class Photo < ActiveRecord::Base
+class Photo < ShotwellTable
   self.table_name = 'PhotoTable'
   
   def thumbnail_filename
