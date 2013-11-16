@@ -54,6 +54,8 @@ ShotwellWebClient::Application.routes.draw do
   #     resources :products
   #   end
 
+  resources :events, :only => [:index, :show]
+
   resources :photos, :only => [:index, :show] do
     get 'image'
     get 'thumbnail_image'
