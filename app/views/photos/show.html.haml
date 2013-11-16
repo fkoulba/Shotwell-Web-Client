@@ -1,0 +1,4 @@
+%pre
+  = image_tag(photo_image_path(@photo), :alt => @photo.filename, :width => '100%')
+  = @photo.to_yaml
+
