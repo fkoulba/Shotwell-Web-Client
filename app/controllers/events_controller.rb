@@ -12,11 +12,11 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = Event.find(params[:id], :include => :photos)
 
     respond_to do |format|
       format.html
-      format.json { render :json => { :event => @event } }
+      format.json { render :json => { :event => @event.as_json(:include => :photos) } }
     end
   end
 end

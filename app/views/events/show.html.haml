@@ -1,3 +1,4 @@
 %pre
   = @event.to_yaml
 
+= render 'shared/photos', :photos => @event.photos
