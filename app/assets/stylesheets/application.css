@@ -11,3 +11,21 @@
  *= require_self
  *= require_tree .
  */
+
+.photos {
+  overflow: hidden;
+
+  padding-left: 0;
+}
+
+  .photos .photo {
+    float: left;
+    margin: 0 10px 10px 0;
+
+    list-style: none;
+  }
+
+    .photos .photo img {
+      height: 128px;
+      vertical-align: middle;
+    }
