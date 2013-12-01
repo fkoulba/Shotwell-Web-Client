@@ -1,4 +1,4 @@
 %ul.photos
   - photos.each do |photo|
-    %li.photo
-      = link_to image_tag(photo_thumbnail_image_path(photo), :alt => photo.filename), photo
+    %li.photo{ 'data-name' => photo.name }
+      = link_to image_tag(photo_thumbnail_image_path(photo), :alt => photo.name), photo

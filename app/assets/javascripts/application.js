@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  $('.photos .photo').each(function() {
+    $(this).append('<div class="info">' + $(this).attr('data-name') + '</div>');
+  });
+});
