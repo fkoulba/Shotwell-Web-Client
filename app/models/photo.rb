@@ -5,8 +5,8 @@ class Photo < ShotwellTable
 
   def thumbnail_filename
     local_filename = 'thumbs360/thumb' + self.id.to_s(16).rjust(16, '0') + '.jpg'
-    if File.exists?('/var/data/photos/.shotwell/thumbs/' + local_filename)
-      '/var/data/photos/.shotwell/thumbs/' + local_filename
+    if File.exists?(Rails.root.join('data/shotwell/thumbs/', local_filename))
+      Rails.root.join('data/shotwell/thumbs/', local_filename)
     elsif File.exists?(Rails.root.join('data', local_filename))
       Rails.root.join('data', local_filename)
     else
